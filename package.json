@@ -1,6 +1,6 @@
 {
   "name": "mangaplus-dl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automatically download the latest chapters of your favorite manga from MangaPlus.",
   "keywords": [
     "manga",
@@ -22,6 +22,7 @@
     "@clack/prompts": "^1.0.0-alpha.1",
     "archiver": "^7.0.1",
     "commander": "^14.0.0",
+    "env-paths": "^3.0.0",
     "lowdb": "^7.0.1",
     "protobufjs": "^7.5.3"
   },

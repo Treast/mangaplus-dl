@@ -65,8 +65,14 @@ Make sure `mangaplus-dl` is installed globally and available in your PATH.
 
 ## File Structure
 
-- Downloaded manga and chapters are stored in the `mangas/` folder as `.cbz` files.
-- Local database is stored in `db.json`.
+- Downloaded manga and chapters are stored as `.cbz` files in :
+  - Windows : `%APPDATA%\mangaplus-dl-nodejs\Data`
+  - macOS : `~/Library/Application Support/mangaplus-dl-nodejs`
+  - Linux : `~/.local/share/mangaplus-dl-nodejs`
+- Local database and config are stored in :
+  - Windows : `%APPDATA%\mangaplus-dl-nodejs\Config`
+  - macOS : `~/Library/Preferences/mangaplus-dl-nodejs`
+  - Linux : `~/.config/mangaplus-dl-nodejs`
 
 ## Notifications
 

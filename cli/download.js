@@ -1,3 +1,4 @@
+import envPaths from 'env-paths';
 import { createWriteStream, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 
@@ -52,7 +53,9 @@ export const downloadManga = async (manga) => {
 
 export const downloadChapter = async (chapter) => {
   const pages = await Api.getPages(chapter);
-  const folder = path.resolve(process.cwd(), 'mangas', chapter.manga.name);
+
+  const paths = envPaths('mangaplus-dl');
+  const folder = path.resolve(paths.data, chapter.manga.name);
   const chapterPath = path.resolve(folder, `${chapter.manga.name} - Chapter ${chapter.name}.cbz`);
 
   if (!existsSync(folder)) {
