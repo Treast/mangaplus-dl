@@ -1,0 +1,29 @@
+{
+  "name": "mangaplus-downloader",
+  "version": "1.0.0",
+  "description": "A CLI manga downloader using MangaPlus from Shueisha",
+  "keywords": [
+    "manga",
+    "mangaplus",
+    "shueisha",
+    "download"
+  ],
+  "license": "ISC",
+  "author": "Vincent Riva <contact@treast.dev>",
+  "type": "module",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.0.0-alpha.1",
+    "archiver": "^7.0.1",
+    "commander": "^14.0.0",
+    "lowdb": "^7.0.1",
+    "protobufjs": "^7.5.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "prettier": "^3.6.2"
+  }
+}
