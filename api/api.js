@@ -98,7 +98,7 @@ class Api {
       headers: new Headers(),
     }).then((res) => res.arrayBuffer());
 
-    const protoPath = path.resolve(process.cwd(), 'api', 'ShueishaMangaPlus.proto');
+    const protoPath = path.resolve(import.meta.dirname, 'ShueishaMangaPlus.proto');
     const Root = (await protobuf.load(protoPath)).lookupType('MangaPlus.Response');
     const data = Root.decode(new Uint8Array(raw));
 

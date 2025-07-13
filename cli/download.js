@@ -1,4 +1,3 @@
-import envPaths from 'env-paths';
 import { createWriteStream, existsSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 
@@ -8,6 +7,7 @@ import archiver from 'archiver';
 import Api from '../api/api.js';
 import config from '../config/config.js';
 import database from '../config/db.js';
+import paths from '../config/paths.js';
 import { notify } from '../utils/notifier.js';
 
 export const download = async () => {
@@ -54,7 +54,6 @@ export const downloadManga = async (manga) => {
 export const downloadChapter = async (chapter) => {
   const pages = await Api.getPages(chapter);
 
-  const paths = envPaths('mangaplus-dl');
   const folder = path.resolve(paths.data, chapter.manga.name);
   const chapterPath = path.resolve(folder, `${chapter.manga.name} - Chapter ${chapter.name}.cbz`);
 
