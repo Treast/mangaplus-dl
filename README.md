@@ -51,6 +51,18 @@ mangaplus-dl download
 
 - Download the latest chapters for all manga in your list.
 
+## Automation with Cron (Linux)
+
+You can automate chapter downloads using a cron job.  
+For example, to check for new chapters every day at 8am:
+
+```bash
+0 8 * * * mangaplus-dl download
+```
+
+Add this line to your crontab with `crontab -e`.  
+Make sure `mangaplus-dl` is installed globally and available in your PATH.
+
 ## File Structure
 
 - Downloaded manga and chapters are stored in the `mangas/` folder as `.cbz` files.
