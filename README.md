@@ -12,9 +12,13 @@ Automatically download the latest chapters of your favorite manga from MangaPlus
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/node-mangaplus-downloader.git
-cd node-mangaplus-downloader
-npm install
+npm install -g mangaplus-dl
+```
+
+Or directly use `npx`
+
+```bash
+npx mangaplus-dl
 ```
 
 ## Configuration
@@ -34,7 +38,7 @@ npm install
 ### Search and add a manga
 
 ```bash
-node cli.js search
+mangaplus-dl search
 ```
 
 - Search for a manga by name and add it to your list.
@@ -42,7 +46,7 @@ node cli.js search
 ### Download new chapters
 
 ```bash
-node cli.js download
+mangaplus-dl download
 ```
 
 - Download the latest chapters for all manga in your list.
@@ -59,3 +63,7 @@ Each time a new chapter is downloaded, a notification is sent to all configured 
 ## Contributing
 
 Pull requests and suggestions are welcome!
+
+---
+
+**License:** MIT
