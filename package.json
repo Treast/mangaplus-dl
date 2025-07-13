@@ -1,14 +1,17 @@
 {
-  "name": "mangaplus-downloader",
+  "name": "mangaplus-dl",
   "version": "1.0.0",
-  "description": "A CLI manga downloader using MangaPlus from Shueisha",
+  "description": "Automatically download the latest chapters of your favorite manga from MangaPlus.",
   "keywords": [
     "manga",
     "mangaplus",
     "shueisha",
     "download"
   ],
-  "license": "ISC",
+  "bin": {
+    "mangaplus-dl": "./cli.js"
+  },
+  "license": "MIT",
   "author": "Vincent Riva <contact@treast.dev>",
   "type": "module",
   "main": "cli.js",
