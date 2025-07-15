@@ -42,7 +42,10 @@ export const downloadManga = async (manga) => {
 
           await notifyChapter(chapter);
         })
-        .catch((err) => {});
+        .catch((err) => {
+          s.stop(`Failed to download chapter of "${manga.name}".`);
+          console.error(err);
+        });
     }
 
     s.stop(`Finished downloading new chapters for "${manga.name}".`);

@@ -1,6 +1,7 @@
 import { cancel, confirm, intro, isCancel, outro, select, spinner, text } from '@clack/prompts';
 
 import Api from '../api/api.js';
+import cache from '../config/cache.js';
 import database from '../config/db.js';
 import { downloadManga } from './download.js';
 
@@ -62,7 +63,13 @@ export const search = async () => {
 };
 
 const searchMangas = async (query) => {
-  const mangas = await Api.getAll();
+  let mangas = cache.getMangas();
+
+  if (!mangas) {
+    mangas = await Api.getAll();
+    await cache.setMangas(mangas);
+  }
+
   const addedMangas = database.data.mangas;
 
   return mangas

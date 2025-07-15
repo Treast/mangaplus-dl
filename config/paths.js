@@ -11,4 +11,8 @@ if (!existsSync(paths.data)) {
   mkdirSync(paths.data, { recursive: true });
 }
 
+if (!existsSync(paths.cache)) {
+  mkdirSync(paths.cache, { recursive: true });
+}
+
 export default paths;
